@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Form dang ky hoc vien</title>
+</head>
+<body>
+<form action="/link_server" method="post">
+    <table border="1">
+        <th>Đang ký học viên</th> </table>
+        <br><br>
+        <label>Họ và tên</label>
+        <input type="text" name="yourname"/>
+        <br><br>
+        <label>Ngày sinh</label>
+        <input type="date" name="dateofbirth"/>
+        <br><br>
+        <label>Giới tính</label>
+        <input type="radio" name="gender" value="male">nam
+        <input type="radio" name="gender" value="female">nữ
+        <br><br>
+        <label >Địa chỉ</label>
+        <address>
+            <input type="address" name="địa chỉ" width="300px"/>
+        </address>
+        <br><br>
+        <label>Lớp</label>
+        <select name="lop"/>
+        <option value="C11">C11</option>
+        <option value="C12">C12</option>
+        <option value="C13">C13</option>
+        </select>
+        <br><br>
+        <label> Email</label>
+        <input type="email" name="email"/>
+        <br><br>
+        <label>Điện thoại</label>
+        <input type="tell" name="tell"/>
+        <br><br>
+    <input type="submit" value="Đăng ký">
+    <input type="reset" value="Nhập lại">
+</form>
+</body>
+</html>
