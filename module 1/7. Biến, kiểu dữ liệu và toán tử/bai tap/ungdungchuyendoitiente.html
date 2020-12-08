@@ -5,55 +5,51 @@
     <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-        <form action="/link_server" method="post">
             <table border="1">
                 <tr>
                     <th>Amount</th>
                     <th>From Currency</th>
                     <th>To Currency</th>
-                    <th>Thành Tiền</th>
                 </tr>
                 <tr>
                     <td>
-                        <input id="amount" type="text" name="amount" value="" số tiền/>
-                    </td>
-
-
-                    <td>
-                        <select name="" id="country"/>
-                        <option value="VN"> VietNam </option>
-                        <option value="US"> USA </option>
+                        <p> <input id="amount" type="number"/> </p>
                     </td>
                     <td>
-                        <select name="" id="money"/>
-                        <option value="VND"> VND </option>
+                        <select id="country">
+                        <option value="VND" > VietNam </option>
+                        <option value="USD" > USA </option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="money">
+                        <option value="VND" > VND </option>
                         <option value="USD"> USD </option>
+                        </select>
                     </td>
-                    <td>
-                        <input type="text" id="result"> result </td>
             </table>
                 <br>
-                <button id="convert" onclick="convert()"> convert </button>
-        </form>
-
-
+                <button type="button" onclick="convert()" > convert </button>
+                <p id="result1" style="color: red"> result
+                </p>
+        <script>
+            function convert() {
+                let a= document.getElementById("amount").value;
+                let b=document.getElementById("country").value;
+                let c=document.getElementById("money").value;
+                let result1;
+                if (
+                    b==="VND" && c==="USD"
+                ){ result1= a /23000;}
+                else
+                    if(
+                        b==="USD" && c==="VND"
+                    ) {
+                        result1= a*23000;
+                    }else
+                    {result1 = a}
+                        document.getElementById("result1").innerHTML= result1
+            }
+        </script>
 </body>
 </html>
-<script>
-    function convert(convert) {
-        let a= document.getElementById("country").value(VN)
-        let b= document.getElementById("money").value(US)
-        if (a=VN && d=USD) {
-            return a= amount * 23000
-        } else
-        if (a=US && c=VND) {
-            return  a= 23000/ amount
-        }
-            document.getElementById(convert).innerText=return
-
-
-    }
-
-
-
-</script>
