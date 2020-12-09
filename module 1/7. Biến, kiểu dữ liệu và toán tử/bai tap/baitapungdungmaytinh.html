@@ -2,9 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ứng dụng máy tinh</title>
 </head>
 <body>
-$END$
+
+<table>
+    <tr>
+        <th>
+            <input type="number" id="o" value="aaa"/>
+        </th>
+        <th>
+            <input type="number" id="o1" value="bbb"/>
+        </th>
+    </tr>
+</table>
+<button type="button" onclick="add()" value="add">addtion(+)</button>
+
+<button type="button" onclick="sub()" value="sub">subtraction(-)</button>
+
+<button type="button" onclick="mul()" value="mul">multiplication(x)</button>
+
+<button type="button" onclick="div()" value="div">division(/)</button>
+<p id="result" width="100px"> result
+
+</p>
+<script>
+    let a = document.getElementById("o");
+    let b = document.getElementById("o1");
+    let result;
+
+    function add() {
+        x = parseFloat(a.value);
+        y = parseFloat(b.value);
+        result = x + y;
+        document.getElementById("result").innerText = result
+    }
+    function sub() {
+        x = parseFloat(a.value);
+        y = parseFloat(b.value);
+        result = x - y;
+        document.getElementById("result").innerText = result
+    }
+    function mul() {
+        x = parseFloat(a.value);
+        y = parseFloat(b.value);
+        result = x * y;
+        document.getElementById("result").innerText = result
+    }
+    function div() {
+        x = parseFloat(a.value);
+        y = parseFloat(b.value);
+        result = x / y;
+        document.getElementById("result").innerText = result
+    }
+
+
+</script>
+
+
 </body>
 </html>

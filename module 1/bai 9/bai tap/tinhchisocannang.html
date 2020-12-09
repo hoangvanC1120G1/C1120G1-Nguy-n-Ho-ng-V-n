@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<body>
+        <script>
+            let a=prompt("nhập chiều cao");
+            let b=prompt("nhập cân nặng");
+            let bmi= b/(a*a)
+            if (bmi < 18)
+                document.write("thiếu cân");
+            else if (bmi < 25.0)
+                document.write("bình thường");
+            else if (bmi < 30.0)
+                document.write("thừa cân");
+            else
+                document.write("béo phì");
+        </script>
+</body>
+</html>

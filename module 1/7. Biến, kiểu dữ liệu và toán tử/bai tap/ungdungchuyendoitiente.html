@@ -5,24 +5,24 @@
     <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-            <table border="1">
+            <table border="1" >
                 <tr>
                     <th>Amount</th>
                     <th>From Currency</th>
                     <th>To Currency</th>
                 </tr>
                 <tr>
-                    <td>
-                        <p> <input id="amount" type="number"/> </p>
+                    <td width="200px">
+                        <p > <input id="amount" type="number" width="200px"/> </p>
                     </td>
-                    <td>
-                        <select id="country">
+                    <td width="200px">
+                        <select id="country" >
                         <option value="VND" > VietNam </option>
                         <option value="USD" > USA </option>
                         </select>
                     </td>
-                    <td>
-                        <select id="money">
+                    <td width="200px">
+                        <select id="money" >
                         <option value="VND" > VND </option>
                         <option value="USD"> USD </option>
                         </select>
@@ -30,7 +30,7 @@
             </table>
                 <br>
                 <button type="button" onclick="convert()" > convert </button>
-                <p id="result1" style="color: red"> result
+                <p id="result1" style="color: red" name="result"> result
                 </p>
         <script>
             function convert() {
