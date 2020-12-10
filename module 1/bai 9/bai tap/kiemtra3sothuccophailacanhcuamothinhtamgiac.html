@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 số thực có phải là cạnh của một hình tam giác</title>
+</head>
+<body>
+        <script>
+            let a = parseInt(prompt("nhập a"));
+            let b = parseInt(prompt("nhập b"));
+            let c = parseInt(prompt("nhập c"));
+            if ((a > 0) && (b > 0) && (c > 0)) {
+                if ((a + b) > c) {
+                    if ((b + c) > a) {
+                        if ((a + c) > b) {
+                            alert("a,b,c là cạnh của một hình tam giác");
+                        } else {
+                            alert("a,b,c không là một cạnh của một của hình tam giác");
+                        }
+                    } else {
+                        alert("a,b,c không là một cạnh của một của hình tam giác");
+                    }
+                } else {
+                    alert("a,b,c không là một cạnh của một của hình tam giác");
+                }
+            } else {
+                alert("a,b,c không là một cạnh của một của hình tam giác");
+            }
+        </script>
+</body>
+</html>
