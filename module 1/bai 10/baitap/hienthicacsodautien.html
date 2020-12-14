@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt(""));
+        let dem=1;
+        let n = 2;
+        let count = 0;
+        while (dem<=number) {
+            count = 0;
+            for (let i=1 ; i <= n; i ++) {
+                if (n % i===0){
+                count++;}
+            } if(count ===2 ){
+                document.write(n + "</br>");
+                dem ++;
+            }
+            n++;
+        }
+    </script>
+</body>
+</html>

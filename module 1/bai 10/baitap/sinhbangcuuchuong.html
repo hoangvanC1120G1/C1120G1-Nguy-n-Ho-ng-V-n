@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+</head>
+<body>
+
+<p id="kq"></p>
+    <script>
+        let tableStr='<table border="1" >';
+        for (let i=1; i<=10;i++){
+            tableStr += ' <tr >'
+            for ( let j=2; j<=9; j++){
+                tableStr += '<td style="width: 200px">'+j+'x'+i+'='+(j*i)+' </td>';
+            }
+            tableStr += '</tr>'
+        }
+        tableStr += '</table>'
+        document.getElementById("kq").innerHTML=tableStr
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in dãy fibonaci</title>
+</head>
+<body>
+    <script>
+        let n = 20
+        let f= 1
+        let f1 = 1
+        let f2 = 1
+        document.write(f1 + "</br>")
+        document.write(f2 + "</br>")
+        for(let i = 3;i<=n;i++){
+            f=f1+f2
+            document.write(f + "</br>")
+            f1= f2
+            f2=f
+        }
+    </script>
+</body>
+</html>

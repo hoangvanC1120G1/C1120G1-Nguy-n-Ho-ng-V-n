@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ người dùng</title>
+</head>
+<body>
+        <script>
+            let flag = true
+            do {
+                let a = prompt("vui lòng nhập nhiệt độ")
+                if (20<a && a<100) {
+                    alert("Nhiệt độ thích hợp");
+                    flag= false;
+                } if (a<20){
+                    alert("vui lòng tăng nhiệt độ")
+                } if(a>100){
+                    alert("vui lòng giảm nhiệt độ")
+                }
+            } while (flag);
+            // while (flag === true)
+        </script>
+</body>
+</html>

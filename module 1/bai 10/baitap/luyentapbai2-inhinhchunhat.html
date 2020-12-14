@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in hinh chu nhat</title>
+</head>
+<body>
+    <script>
+
+        let hang = 7
+        let cot= 22
+        document.write("<pre>")
+        for(let i =0;i<hang;i++){
+            document.write("</br>")
+            if(i===0||i===(hang-1)){
+                for(let j=0;j<cot;j++){
+                    document.write("*")
+                }
+            }
+            else{
+                document.write("*")
+                for (let j=0;j<cot-2;j++){
+                    document.write("&nbsp")
+                }
+                document.write("*")
+            }
+        }
+        document.write("</pre>")
+    </script>
+</body>
+</html>
