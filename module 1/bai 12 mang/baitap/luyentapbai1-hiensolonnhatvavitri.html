@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi so lon nhat va vi tri</title>
+</head>
+<body>
+    <script>
+        let a= [5, 6, 25, 13, 32, 6, 9, 17, 1, 12];
+        let max = a[0];
+        let index =0
+        for (let i=1;i<a.length;i++){
+            if (a[i] > max) {
+                max = a[i];
+                index = i;
+            }
+        }document.write("gia tri lon nhat la: "+ max +"vi tri"+ index)
+    </script>
+</body>
+</html>

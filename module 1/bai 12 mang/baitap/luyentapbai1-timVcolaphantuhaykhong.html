@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim V co la phan tu hay khong</title>
+</head>
+<body>
+        <script>
+            let a=[];
+            for (let i =0; i<10;i++){
+                a[i]=prompt("nhap gia tri thu"+i);
+               }
+            let V=parseInt(prompt("nhap phan tu V"));
+            for (let i=0;i<10;i++) {
+                if (V == a[i]) {
+                    alert("V is in the array");
+                    break;
+                } else {
+                    alert("V is not in the array");
+                }
+            }
+        </script>
+</body>
+</html>

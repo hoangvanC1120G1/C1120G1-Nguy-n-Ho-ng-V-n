@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra gia tri lon nhat trong mang va gia tri trung binh cua mang</title>
+</head>
+<body>
+<script>
+    let a=[12, 2, 5, 18, 8, 6];
+    let max = a[0];
+    let index = 0;
+    let total = 0;
+        for (let j = 0; j < a.length; j++) {
+            if (a[j] > max) {
+                max = a[j];
+                index = j;
+            }
+            total += a[j];
+        }
+    console.log("so lon nhat la:" +max)
+    console.log("vi tri la:" + index)
+    console.log("trung binh la:"+ total/a.length)
+
+
+</script>
+</body>
+</html>

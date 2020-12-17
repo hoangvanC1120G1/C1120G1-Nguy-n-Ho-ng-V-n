@@ -11,10 +11,10 @@
     </caption>
 
     <tr>
-        <td >
+        <td>
             Họ và tên
         </td>
-        <td width="300px" >
+        <td width="300px">
             <input type="text" style="width: 300px" id="ten"/>
         </td>
     </tr>
@@ -31,7 +31,7 @@
             Ngày tháng năm sinh
         </td>
         <td width="300px">
-            <input type="text" style="width: 300px" id="dateofbirth"/>
+            <input type="date"  name="birthday" id="dateofbirth" style="width: 300px"/>
         </td>
     </tr>
     <tr>
@@ -39,7 +39,20 @@
             Địa chỉ
         </td>
         <td width="300px">
-            <input type="text" style="width: 300px" id="dc" />
+            <input type="text" style="width: 300px" id="dc"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Địa chỉ được giảm giá
+        </td>
+        <td width="300px">
+            <select style="width: 308px" id="dc2">
+                <option id="DN">Đà Nẵng giảm 20$</option>
+                <option id="Hue">Huế Giảm 10$</option>
+                <option id="QN">Quảng Nam giảm 5$</option>
+                <option id="">Khác...</option>
+            </select>
         </td>
     </tr>
     <tr>
@@ -47,23 +60,21 @@
             Email
         </td>
         <td width="300px">
-            <input type="text" style="width: 300px" id="mail" />
+            <input type="email" name="email" style="width: 300px" id="mail"/>
         </td>
     </tr>
     <tr>
         <td>
-            Loại custumer
+            Loại customer
         </td>
-        <td width="300px" >
+        <td width="300px">
             <select style="width: 308px" id="cus">
-                <option>Diamond</option>
-                <option>Platinum</option>
-                <option>Gold</option>
-                <option>Sliver</option>
-                <option>Member</option>
+                <option id="Dia">Diamond giảm 15$</option>
+                <option id="Pla">Platinum giảm 10$</option>
+                <option id="Go">Gold giảm 5$</option>
+                <option id="Sli">Sliver giảm 2$</option>
+                <option id="Mem">Member</option>
             </select>
-
-
         </td>
     </tr>
     <tr>
@@ -76,18 +87,18 @@
     </tr>
     <tr>
         <td>
-           Số ngày thuê
+            Số ngày thuê
         </td>
         <td width="300px">
-            <input type="number" style="width: 300px" id="sn"/>
+            <input type="number" id="snt" style="width: 300px"/>
         </td>
     </tr>
     <tr>
         <td>
             Loại dịch vụ
         </td>
-        <td width="300px" >
-            <select  style="width: 308px" id="loai" >
+        <td width="300px">
+            <select style="width: 308px" id="loai">
                 <option value="500">Villa 500$/ngày</option>
                 <option value="300">House 300$/ngày</option>
                 <option value="100">Room 100$/ngày</option>
@@ -98,7 +109,7 @@
         <td>
             Loại phòng thuê
         </td>
-        <td width="300px" >
+        <td width="300px">
             <select style="width: 308px" id="phong">
                 <option>Vip</option>
                 <option>Bussiness</option>
@@ -106,30 +117,19 @@
             </select>
         </td>
     </tr>
-    <tr>
-        <td>
-           Giảm giá
-        </td>
-        <td width="300px">
-            <input type="number" style="width: 300px" id="giam" />
-        </td>
-    </tr>
-
-
-
 </table>
 <br>
 <button type="button" onclick="aa()">Nhập</button>
+<button type="button" onclick="bb()">Tính tiền</button>
 <table border="1">
     <caption>
         <h3>Hiện thông tin cá nhân</h3>
     </caption>
-
     <tr>
-        <td >
+        <td>
             Họ và tên
         </td>
-        <td width="300px" >
+        <td width="300px">
             <p id="ten1" style="height: 5px"></p>
         </td>
     </tr>
@@ -146,7 +146,7 @@
             Ngày tháng năm sinh
         </td>
         <td width="300px">
-            <p  id="dateofbirth1"></p>
+            <p id="dateofbirth1"></p>
         </td>
     </tr>
     <tr>
@@ -154,7 +154,7 @@
             Địa chỉ
         </td>
         <td width="300px">
-            <p  id="dc1" ></p>
+            <p id="dc1"></p>
         </td>
     </tr>
     <tr>
@@ -162,17 +162,15 @@
             Email
         </td>
         <td width="300px">
-            <p  id="mail1" ></p>
+            <p id="mail1"></p>
         </td>
     </tr>
     <tr>
         <td>
-            Loại custumer
+            Loại customer
         </td>
         <td>
-        <p id="cus1" ></p>
-
-
+            <p id="cus1"></p>
         </td>
     </tr>
     <tr>
@@ -180,7 +178,7 @@
             Số lượng đi kèm
         </td>
         <td width="300px">
-            <p  id="sl1"></p>
+            <p id="sl1"></p>
         </td>
     </tr>
     <tr>
@@ -196,36 +194,36 @@
             Loại dịch vụ
         </td>
         <td width="300px">
-         <p id="loai1"></p>
+            <p id="loai1"></p>
         </td>
     </tr>
     <tr>
         <td>
             Loại phòng thuê
         </td>
-        <td width="300px" >
-          <p id="phong1"></p>
+        <td width="300px">
+            <p id="phong1"></p>
         </td>
     </tr>
     <tr>
         <td>
-           Số tiền phải trả
+            Số tiền phải trả
         </td>
         <td width="300px">
-            <p id="giam1" ></p>
+            <p id="giam1"></p>
         </td>
     </tr>
-
-
 
 </table>
 
 <br>
-<p id="htt">
-</p>
-
+<p id="htt"> </p>
+<p>Thuê trên 7 ngày được giảm 30$</p>
+<p>Thuê từ 5 - 7 ngày được giảm 20$</p>
+<p>Thuê từ 2 - 4 ngày được giảm 10$</p>
 
 <script>
+
     function aa() {
         let a = document.getElementById("ten").value;
         let b = document.getElementById("cmt").value;
@@ -234,29 +232,85 @@
         let e = document.getElementById("mail").value;
         let f = document.getElementById("cus").value;
         let g = document.getElementById("sl").value;
-        let h = document.getElementById("sn").value;
+        let h = document.getElementById("snt").value;
         let i = document.getElementById("loai").value;
         let k = document.getElementById("phong").value;
-        let l = document.getElementById("giam").value;
-        let m = h * i * (1-l/100)
+
+
 
         document.getElementById("ten1").innerText = a;
         document.getElementById("cmt1").innerText = b;
         document.getElementById("dateofbirth1").innerText = c;
         document.getElementById("dc1").innerText = d;
-        document.getElementById("mail1").innerText = e;
+        document.getElementById("mail1").innerText = e  ;
         document.getElementById("cus1").innerText = f;
         document.getElementById("sl1").innerText = g;
         document.getElementById("sn1").innerText = h;
         document.getElementById("loai1").innerText = i;
         document.getElementById("phong1").innerText = k;
-        document.getElementById("giam1").innerText= m
+
+        // let e = [];
+        // for(i=0;i<e.length;i++){
+        //     e[i]= document.getElementById("mail").value;
+        //     if (i===0){
+        //         if(e[i]==="@")
+        //             alert("sai email")
+        //     }
+        // }
+        var email = document.getElementById('mail');
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if (!filter.test(email.value)) {
+            alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+            email.focus;
+            return false;
+        }
+        else{
+            document.getElementById("mail1").innerHTML = email.value;
+        }
+
 
     }
 
-
+    function bb() {
+        let address = document.getElementById("dc2").value;
+        let customer = document.getElementById("cus").value;
+        let snt2 = document.getElementById("snt").value;
+        let Room= document.getElementById("loai").value;
+        var totalmoney = Room*snt2 ;
+        switch (address) {
+            case "Đà Nẵng giảm 20$": totalmoney -= 20;
+                break;
+            case "Huế giảm 20$": totalmoney -= 10;
+                break;
+            case "Quảng Nam giảm 5$": totalmoney -= 5;
+                break;
+                }
+        switch (customer) {
+            case "Diamond giảm 15$": totalmoney = totalmoney - 15;
+                break;
+            case "Platinum giảm 10$": totalmoney = totalmoney - 10;
+                break;
+            case "Gold giảm 5$": totalmoney = totalmoney - 5;
+                break;
+            case "Sliver giảm 2$": totalmoney = totalmoney - 2;
+                break;
+            case "Member":  break;
+        }
+        if(snt2>7){
+            totalmoney-=30;
+        }else if(snt2>=5){
+            totalmoney-=20;
+        }else if(snt2>=2){
+            totalmoney-=20;
+        }
+        document.getElementById("giam1").innerText= totalmoney + "$"
+    }
+    function checkNumber(str) {
+        if (isNumeric(str)) {
+            return true;
+        }
+        return false;
+    }
 </script>
-
-
 </body>
 </html>

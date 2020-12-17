@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let n = parseInt(prompt("nhap so vao"));
+        for (let i = 0; i < n; i++) {
+            a[i] = prompt("phần tử của mảng");
+        }
+        let count=0;
+        console.log(a);
+        for (let j = 0; j < n; j++) {
+            if (!isNaN(a[j])) {
+                count++;
+            }
+        } console.log(count);
+    </script>
+</body>
+</html>
