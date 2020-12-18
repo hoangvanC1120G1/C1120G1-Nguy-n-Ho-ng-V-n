@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function checknumber(end) {
+            let count = 0;
+            let n=2 ;
+            let count2 = 1;
+            while (count2 < end) {
+                count = 0
+                for (let i = 0; i <= n; i++) {
+                    if (n % i === 0) {
+                        count++;
+                    }
+                }if (count === 2) {
+                    count2++;
+                    document.write(n+"</br>")
+                } if (n>10000){
+                    break;
+                }
+                n++
+            }
+        }
+        checknumber(1600)
+    </script>
+</body>
+</html>

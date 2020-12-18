@@ -82,7 +82,7 @@
             Số lượng đi kèm
         </td>
         <td width="300px">
-            <input type="text" style="width: 300px" id="sl"/>
+            <input type="number" style="width: 300px" id="sl"/>
         </td>
     </tr>
     <tr>
@@ -225,7 +225,21 @@
 <script>
 
     function aa() {
+        let tempname=""
         let a = document.getElementById("ten").value;
+        a=a.trim().toLowerCase();
+        for(let i=0;i<a.length;i++){
+            if(a.charAt(i)===" "&&a.charAt(i+1)===" "){
+                continue;
+            }if(i===0||a.charAt(i-1)===" "){
+                tempname+=a.charAt(i).toUpperCase();
+                continue;
+            }tempname+=a.charAt(i);
+        } a=tempname;
+
+
+
+
         let b = document.getElementById("cmt").value;
         let c = document.getElementById("dateofbirth").value;
         let d = document.getElementById("dc").value;
@@ -236,7 +250,7 @@
         let i = document.getElementById("loai").value;
         let k = document.getElementById("phong").value;
 
-
+        checkId("cmt", b, 9)
 
         document.getElementById("ten1").innerText = a;
         document.getElementById("cmt1").innerText = b;
@@ -249,14 +263,7 @@
         document.getElementById("loai1").innerText = i;
         document.getElementById("phong1").innerText = k;
 
-        // let e = [];
-        // for(i=0;i<e.length;i++){
-        //     e[i]= document.getElementById("mail").value;
-        //     if (i===0){
-        //         if(e[i]==="@")
-        //             alert("sai email")
-        //     }
-        // }
+
         var email = document.getElementById('mail');
         var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if (!filter.test(email.value)) {
@@ -267,8 +274,6 @@
         else{
             document.getElementById("mail1").innerHTML = email.value;
         }
-
-
     }
 
     function bb() {
@@ -305,12 +310,40 @@
         }
         document.getElementById("giam1").innerText= totalmoney + "$"
     }
+
     function checkNumber(str) {
         if (isNumeric(str)) {
             return true;
         }
         return false;
     }
+    function compareLength(str, length) {
+        if (str && length) {
+            if (str.length > length) {
+                return 1;
+            } else if (str.length < length) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+        return 2;
+    }
+    function checkId(field, str) {
+        let isNum = checkNumber(str);
+        if (isNum === true) {
+            let checkLength = compareLength(str, 9);
+            if (checkLength === 0) {
+                return true;
+            } else {
+                alert(field + ' khong du 9 ky tu');
+            }
+        } else {
+            alert(field + ' khong phai la so');
+        }
+    }
+    function isNumeric(number) {
+        return parseFloat(number).toString() === number.toString();}
 </script>
 </body>
 </html>
