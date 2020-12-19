@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm</title>
+</head>
+<body>
+    <input type="text" id="nhap" placeholder="nhap ten san pham">   <button type="button" style="background-color: chartreuse" onclick="newinput()">ADD</button>
+
+
+
+    </table>
+    <p id="showtable"></p>
+
+
+    <script>
+        let listSP=["Apple","Samsung","Nokia","Oppo"];
+
+
+        function shoWer() {
+            let table1='<table >\n' +
+                '        <tr>\n' +
+                '            <th style="width: 300px" height="30" " >Product Name</th>\n' +
+                '        </tr>'
+            for (let i=0; i<listSP.length;i++){
+                    table1+='<tr>\n' +
+                        '                        <td style="width: 300px" height="30">'+listSP[i]+'</td>\n' +
+                        '                        <td>'+'<input type="button" value="Edit" style="background-color: chartreuse" onclick="repair1('+(i)+')"></td>\n' +
+                        '                        <td>'+'<input type="button" id="xoa" style="background-color: chartreuse" value="Delete" onclick="delete1('+(i)+')"></td>\n' +
+                        '                        </tr>'
+            }
+            document.getElementById("showtable").innerHTML=table1
+        }
+        shoWer()
+        
+        
+        function delete1(id) {
+            let delp=confirm("Bạn có chắc muốn xóa sản phẩm này không"+listSP[id])
+            if(delp){
+                listSP.splice(id,1)
+            }
+            shoWer()
+        }
+
+        function repair1(id) {
+            let newname=prompt("new name")
+            if (newname!==""&&newname!==null){
+                listSP[id]=newname
+            }
+            shoWer()
+        }
+
+        function newinput() {
+            let newinput1= document.getElementById("nhap").value;
+            if (newinput1!==""){
+                listSP.push(newinput1);
+            }else {
+                alert("hãy nhập tên sản phẩm");
+            }
+            shoWer()
+        }
+    </script>
+</body>
+</html>
