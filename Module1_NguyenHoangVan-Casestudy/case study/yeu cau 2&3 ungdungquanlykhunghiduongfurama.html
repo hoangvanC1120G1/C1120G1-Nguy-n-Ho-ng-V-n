@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Ứng Dụng Quản Lý Khu nghỉ dưỡng Furama</title>
+    <link type="text/css" rel="stylesheet" href="table2.css">
 </head>
 <body>
-<table border="1">
+<div id="div3"></div>
+<div id="div4">
+<p style="color: aliceblue">Ứng dụng quản lý khu nghỉ dưỡng Furama</p>
+</div>
+<table border="1" id="table1">
     <caption>
         <h3>Nhập thông tin cá nhân</h3>
     </caption>
@@ -119,30 +124,32 @@
     </tr>
 </table>
 <br>
-<button type="button" onclick="aa()">Nhập</button>
-<button type="button" onclick="bb()">Tính tiền</button>
-<table border="1">
+<div id="div2">
+<button type="button" onclick="aa()" id="nut 1">Nhập</button>
+<button type="button" onclick="bb()" id="nut 2">Tính tiền</button>
+</div>
+<table border="1" id="table2">
     <caption>
         <h3>Hiện thông tin cá nhân</h3>
     </caption>
     <tr>
-        <td>
+        <td  width="300px">
             Họ và tên
         </td>
-        <td width="300px">
-            <p id="ten1" style="height: 5px"></p>
+        <td width="300px" height="30">
+            <p id="ten1"></p>
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             CMND
         </td>
         <td width="300px">
-            <p id="cmt1" style="height: 5px"></p>
+            <p id="cmt1" ></p>
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Ngày tháng năm sinh
         </td>
         <td width="300px">
@@ -150,7 +157,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Địa chỉ
         </td>
         <td width="300px">
@@ -158,7 +165,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Email
         </td>
         <td width="300px">
@@ -166,7 +173,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Loại customer
         </td>
         <td>
@@ -174,7 +181,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Số lượng đi kèm
         </td>
         <td width="300px">
@@ -182,7 +189,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Số ngày thuê
         </td>
         <td width="300px">
@@ -190,7 +197,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Loại dịch vụ
         </td>
         <td width="300px">
@@ -198,7 +205,7 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px">
             Loại phòng thuê
         </td>
         <td width="300px">
@@ -206,10 +213,10 @@
         </td>
     </tr>
     <tr>
-        <td>
+        <td  width="300px" height="30">
             Số tiền phải trả
         </td>
-        <td width="300px">
+        <td width="300px" height="30">
             <p id="giam1"></p>
         </td>
     </tr>
@@ -217,10 +224,13 @@
 </table>
 
 <br>
+
 <p id="htt"> </p>
+<div id="div1">
 <p>Thuê trên 7 ngày được giảm 30$</p>
 <p>Thuê từ 5 - 7 ngày được giảm 20$</p>
 <p>Thuê từ 2 - 4 ngày được giảm 10$</p>
+</div>
 
 <script>
 
@@ -238,9 +248,27 @@
         } a=tempname;
 
 
+        // let check=false;
+        let b = document.getElementById("cmt");
+        // do{
+        //     if(!isNaN(b)){
+        //         b= Number.parseFloat(b);
+        //     }
+        //     if (Number.isInteger(b)){
+        //         alert("CMND phai la so");
+        //         continue;
+        //     }
+        //     if (b<10000000 || b>99999999){
+        //         alert("CMND ko du");
+        //         continue;
+        //     }
+        //    check = true;
+        // }while (!check){
+        //     check = true;
+        // }
 
 
-        let b = document.getElementById("cmt").value;
+
         let c = document.getElementById("dateofbirth").value;
         let d = document.getElementById("dc").value;
         let e = document.getElementById("mail").value;
@@ -310,7 +338,7 @@
         }
         document.getElementById("giam1").innerText= totalmoney + "$"
     }
-
+    // ham kiem tra CMND
     function checkNumber(str) {
         if (isNumeric(str)) {
             return true;
@@ -344,6 +372,7 @@
     }
     function isNumeric(number) {
         return parseFloat(number).toString() === number.toString();}
+
 </script>
 </body>
 </html>

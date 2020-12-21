@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ungdungmang</title>
+</head>
+<body>
+    <p id="show1"></p>
+  <button type="button" value="them" onclick="nhan()">them</button>
+
+    <script>
+        let listDS=["Nguyen Van A","Nguyen Van B",];
+        function show() {
+            let table = '<table border="1">\n' +
+                '        <tr>\n' +
+                '            <th>STT</th>\n' +
+                '            <th>Ten</th>\n' +
+                '            <th>Xoa</th>\n' +
+                '        </tr>'
+            for (let i=0;i<listDS.length;i++){
+                table += '<tr>\n' +
+                    '            <td>'+(i)+'</td>\n' +
+                    '            <td>'+listDS[i]+'</td>\n' +
+                    '            <td>'+'<input type="button" id="xoa"  value="Xoa" onclick="delete1('+(i)+')"></td>\n' +
+                    '        </tr>'
+            }
+            document.getElementById("show1").innerHTML= table;
+        }
+        document.write("</table>")
+        show();
+        function nhan() {
+            let newinput= prompt("nhap ten muon them");
+            if (newinput!==""){
+                listDS.push(newinput);
+            }else{
+                alert("Hay nhap ten");
+            }
+            show();
+        }
+        function delete1(id) {
+            let dele=confirm("Bạn có chắc muốn xóa sản phẩm này không"+listDS[id])
+            if(dele){
+                listDS.splice(id,1)
+            }
+            show();
+        }
+    </script>
+</body>
+</html>

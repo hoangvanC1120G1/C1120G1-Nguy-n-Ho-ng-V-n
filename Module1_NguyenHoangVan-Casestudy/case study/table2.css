@@ -1,0 +1,45 @@
+#table1{
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 150px;
+    top: 100px;
+    text-decoration-color: darkolivegreen;
+}
+#table2{
+    width:500px;
+    height: 150px;
+    font-weight: normal;
+    font-size: 20px;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+}
+#div2{
+    position: absolute;
+    left: 400px;
+    top: 520px;
+}
+#div1{
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 250px;
+    top: 550px;
+}
+#div3{
+    width: 1530px;
+    height: 100px;
+    left: 1px;
+    top: 1px;
+    background-color: darkolivegreen ;
+    position: absolute;
+    z-index: 1;
+}
+#div4{
+    font-size: 30px;
+    left: 500px;
+    top: 0.5rem;
+    position: absolute;
+    z-index: 2;
+}
