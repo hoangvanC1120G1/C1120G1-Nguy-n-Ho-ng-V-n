@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(C) {
+                this.C = C
+            }
+            Fah(){
+                if(this.C > -273){
+                return (9/5 * this.C + 32 +"do F")
+                } else {
+                    alert("nhiet do khong duoc thap hon -273")
+                }
+            }
+            Kevin(){
+                if(this.C > -273) {
+                    return (this.C + 273.15 + "do kenvin")
+                }else {
+                    alert("nhiet do khong duoc thap hon -273")
+                }
+            }
+        }
+        let change= new Temperature(20);
+        console.log(change.Fah())
+        console.log(change.Kevin())
+    </script>
+</body>
+</html>

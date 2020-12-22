@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<input type="text" id="display" disabled style="height: 50px"><br>
+<input type="button" value="check" onclick="check()">
+<input type="button" value="on/off" onclick="on_off()">
+<script>
+    class mobileNokia {
+        constructor(battery, status) {
+            this.battery = battery;
+            this.status = status
+        }
+
+        checkOn_Off() {
+            let a = document.getElementById(this.status);
+            if (a.disabled) {
+                alert("điện thoại đang tắt")
+            } else {
+                alert("điện thoại đang bật")
+            }
+        }
+
+        onoff() {
+            let a = document.getElementById(this.status);
+            if (a.disabled === false) {
+                a.disabled = true;
+            } else {
+                a.disabled = false;
+            }
+            return a
+        }
+
+
+    }
+
+    let nokia = new mobileNokia(100, 'display')
+
+    function check() {
+        nokia.checkOn_Off()
+    }
+
+    function on_off() {
+        nokia.onoff()
+    }
+
+    // class mobileNokia{
+    //     constructor(battery,memory1,messenger,inbox,status,onoff) {
+    //         this.battery=battery;
+    //         this.messenger=messenger;
+    //         this.memory1=memory1;
+    //         this.inbox=inbox;
+    //         this.sent=sent;
+    //         this.status=status;
+    //         this.onoff=onoff;
+    //     }
+    //     batterystatus(){
+    //         this.battery = 100;
+    //         alert(this.battery);
+    //     }
+    //     onoff1(){
+    //         if(this.onoff==="on"){
+    //             alert("Bật điện thoại");
+    //         }else if (this.onoff==="off"){
+    //             alert("Tắt điện thoại");
+    //         }
+    //     }
+    //     statusonoff(){
+    //         if(this.status==="on"){
+    //             alert("Điện thoại đang bật");
+    //         }else if(this.status==="off"){
+    //             alert("Điện thoại đang tắt");
+    //         }
+    //     }
+    //     composermessenger(){
+    //         let newmessenger= prompt("Soạn tin nhắn")
+    //     }
+    // }
+    //
+    // class mobileIphone{
+    //     constructor(battery,memory1,messenger,inbox,status) {
+    //         this.battery=battery;
+    //         this.messenger;
+    //         this.memory1=memory1;
+    //         this.inbox=inbox;
+    //         this.sent;
+    //         this.status=status;
+    //     }
+    //     batterystatus(){
+    //         this.battery = 100;
+    //         alert(this.battery+"pin");
+    //     }
+    //     onoff1(){
+    //         if(this.status==="off"){
+    //            let on = prompt("vui lòng nhập On để bật điện thoại");
+    //            if(on==="on"){
+    //                alert("Bật điện thoại");
+    //            }else{
+    //                alert("Vui lòng bật điện thoại")
+    //            }
+    //         }
+    //         if(this.status==="on"){
+    //             let off = prompt("vui lòng nhập Off để tắt điện thoại");
+    //             if(off==="off"){
+    //                 confirm("bạn chắc là muốn tắt chứ");
+    //                 alert("Tắt điện thoại");
+    //             }else{
+    //                 alert("Bạn không muốn tắt điện thoại ak?");
+    //             }
+    //         }
+    //     }
+    //     statusonoff(){
+    //         if(this.status==="on"){
+    //             alert("Điện thoại đang bật");
+    //         }else if(this.status==="off"){
+    //             alert("Điện thoại đang tắt");
+    //         }
+    //     }
+    //     composermessenger(){
+    //         this.messenger=prompt("nhập tin nhắn");
+    //     }
+    //     sentmessenger(){
+    //         this.sent = alert("bạn đã gửi tin nhắn");
+    //     }
+    // }
+
+
+    // class mobileNokia {
+    //     constructor(battery, status) {
+    //         this.battery = battery;
+    //         this.status = status
+    //     }
+    //     getStatus(){
+    //         this.status = !this.status;
+    //         return this.status;
+    //     }
+    // }
+    // let Nokia = mobileNokia(100, "on_off")
+
+
+</script>
+</body>
+</html>
