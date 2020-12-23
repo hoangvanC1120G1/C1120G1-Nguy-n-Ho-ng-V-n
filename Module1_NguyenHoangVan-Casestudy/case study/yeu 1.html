@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 1</title>
+    <link type="text/css" rel="stylesheet" href="table2.css">
+</head>
+<body>
+<div id="div3"></div>
+<div id="div4">
+    <p style="color: aliceblue">Ứng dụng quản lý khu nghỉ dưỡng Furama</p>
+</div>
+<table border="1" id="table1">
+    <caption>
+        <h3>Nhập thông tin cá nhân</h3>
+    </caption>
+
+    <tr>
+        <td>
+            Họ và tên
+        </td>
+        <td width="300px">
+            <input type="text" style="width: 300px" id="ten"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            CMND
+        </td>
+        <td width="300px">
+            <input type="text" style="width: 300px" id="cmt"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ngày tháng năm sinh
+        </td>
+        <td width="300px">
+            <input type="date"  name="birthday" id="dateofbirth" style="width: 300px"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Địa chỉ
+        </td>
+        <td width="300px">
+            <input type="text" style="width: 300px" id="dc"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Địa chỉ được giảm giá
+        </td>
+        <td width="300px">
+            <select style="width: 308px" id="dc2">
+                <option id="DN">Đà Nẵng </option>
+                <option id="Hue">Huế  </option>
+                <option id="QN">Quảng Nam  </option>
+                <option id="">Khác...</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email
+        </td>
+        <td width="300px">
+            <input type="email" name="email" style="width: 300px" id="mail"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Loại customer
+        </td>
+        <td width="300px">
+            <select style="width: 308px" id="cus">
+                <option id="Dia">Diamond </option>
+                <option id="Pla">Platinum </option>
+                <option id="Go">Gold </option>
+                <option id="Sli">Sliver  </option>
+                <option id="Mem">Member</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Số lượng đi kèm
+        </td>
+        <td width="300px">
+            <input type="number" style="width: 300px" id="sl"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Số ngày thuê
+        </td>
+        <td width="300px">
+            <input type="number" id="snt" style="width: 300px"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Loại dịch vụ
+        </td>
+        <td width="300px">
+            <select style="width: 308px" id="loai">
+                <option value="500">Villa 500$/ngày</option>
+                <option value="300">House 300$/ngày</option>
+                <option value="100">Room 100$/ngày</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Loại phòng thuê
+        </td>
+        <td width="300px">
+            <select style="width: 308px" id="phong">
+                <option>Vip</option>
+                <option>Bussiness</option>
+                <option>Normal</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+           Giảm giá
+        </td>
+        <td>
+            <input type="text" style="width: 300px" id="giam"/>
+        </td>
+
+    </tr>
+</table>
+<br>
+<div id="div2">
+    <button type="button" onclick="aa()" id="nut 1">Nhập</button>
+<!--    <button type="button" onclick="bb()" id="nut 2">Tính tiền</button>-->
+</div>
+<table border="1" id="table2">
+    <caption>
+        <h3>Hiện thông tin cá nhân</h3>
+    </caption>
+    <tr>
+        <td  width="300px">
+            Họ và tên
+        </td>
+        <td width="300px" height="30">
+            <p id="ten1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            CMND
+        </td>
+        <td width="300px">
+            <p id="cmt1" ></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Ngày tháng năm sinh
+        </td>
+        <td width="300px">
+            <p id="dateofbirth1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Địa chỉ
+        </td>
+        <td width="300px">
+            <p id="dc1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Email
+        </td>
+        <td width="300px">
+            <p id="mail1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Loại customer
+        </td>
+        <td>
+            <p id="cus1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Số lượng đi kèm
+        </td>
+        <td width="300px">
+            <p id="sl1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Số ngày thuê
+        </td>
+        <td width="300px">
+            <p id="sn1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Loại dịch vụ
+        </td>
+        <td width="300px">
+            <p id="loai1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px">
+            Loại phòng thuê
+        </td>
+        <td width="300px">
+            <p id="phong1"></p>
+        </td>
+    </tr>
+    <tr>
+        <td  width="300px" height="30">
+            Số tiền phải trả
+        </td>
+        <td width="300px" height="30">
+            <p id="giam1"></p>
+        </td>
+    </tr>
+
+</table>
+    <script>
+        function aa() {
+            let a = document.getElementById("ten").value;
+            let b = document.getElementById("cmt").value;
+            let c = document.getElementById("dateofbirth").value;
+            let d = document.getElementById("dc").value;
+            let e = document.getElementById("mail").value;
+            let f = document.getElementById("cus").value;
+            let g = document.getElementById("sl").value;
+            let h = document.getElementById("snt").value;
+            let i = document.getElementById("loai").value;
+            let k = document.getElementById("phong").value;
+            let l = document.getElementById("giam").value;
+            let m= i * h *(1-l/100)
+            document.getElementById("ten1").innerText = a;
+            document.getElementById("cmt1").innerText = b;
+            document.getElementById("dateofbirth1").innerText = c;
+            document.getElementById("dc1").innerText = d;
+            document.getElementById("mail1").innerText = e;
+            document.getElementById("cus1").innerText = f;
+            document.getElementById("sl1").innerText = g;
+            document.getElementById("sn1").innerText = h;
+            document.getElementById("loai1").innerText = i;
+            document.getElementById("phong1").innerText = k;
+            document.getElementById("giam1").innerHTML = m;
+        }
+
+    </script>
+</body>
+</html>

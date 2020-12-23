@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 4 tạo danh sách</title>
+    <link type="text/css" href="yeucau5css.css" rel="stylesheet">
+</head>
+<body>
+
+<p><input type="button" id="mainmemu" onclick="displayMainMenu()" value="Mainmemu"/></p>
+
+<!--<div id="div5" style="display: none" >-->
+<!--    <input type="button" id="Add" onclick="addNew()" value="Add"/>-->
+<!--    <input type="button" id="Edit" onclick="edit()" value="EditInformationCustomer"/>-->
+<!--    <input type="button" id="Disp" onclick="disPlay()" value="DispDisplayinformation"/>-->
+<!--    <input type="button" id="Delete1" onclick="delete2()" value="Delete"/>-->
+<!--    <input type="button" id="exit1" onclick="exit1()" value="Exit"/>-->
+<!--</div>-->
+
+<script>
+    let listcustomer = [];
+
+    function displayMainMenu() {
+        document.write('<input type="button" id="Add" onclick="addNew()" value="Add"/>');
+        document.write('<input type="button" id="Edit" onclick="edit()" value="EditInformationCustomer"/>');
+        document.write('<input type="button" id="Disp" onclick="disPlay()" value="DispDisplayinformation"/>');
+        document.write('<input type="button" id="Delete1" onclick="delete2()" value="Delete"/>');
+        document.write('<input type="button" id="exit1" onclick="exit1()" value="Exit"/>');
+        // document.getElementById("div5").style.display="block";
+     }
+
+    function addNew() {
+        let n = parseInt(prompt("nhập số người muốn thêm"))
+        let size= listcustomer.length+n;
+        for (let i = listcustomer.length; i < size; i++) {
+            let customer = [];
+            for (let j = 0; j < 11; j++) {
+                switch (j) {
+                    case 0:
+                        customer[j] = prompt("Please input name");
+                        break;
+                    case 1:
+                        customer[j] = prompt("Please input CMND");
+                        break;
+                    case 2:
+                        customer[j] = prompt("Please input Ngày tháng năm sinh");
+                        break;
+                    case 3:
+                        customer[j] = prompt("Please input Email");
+                        break;
+                    case 4:
+                        customer[j] = prompt("Please input Địa chỉ");
+                        break;
+                    case 5:
+                        customer[j] = prompt("Please input Loại custommer");
+                        break;
+                    case 6:
+                        customer[j]= prompt("Please input Giảm giá");
+                        break;
+                    case 7:
+                        customer[j] = prompt("Please input Số lượng đi kèm");
+                        break;
+                    case 8:
+                        customer[j] = prompt("Please input Số ngày thuê");
+                        break;
+                    case 9:
+                        customer[j] = prompt("Please input Loại dịch vụ");
+                        break;
+                    case 10:
+                        customer[j] = prompt("Please input Loại phòng thuê");
+                        break;
+                }
+            }
+            listcustomer.push(customer);
+        }
+        disPlay()
+    }
+    listcustomer;
+    function disPlay() {
+        document.write('<p id="show1"></p>')
+        let table = '<table border="1">\n' +
+            '        <tr>\n' +
+            '            <th>STT</th>\n' +
+            '            <th>Ten</th>\n' +
+            '            <th>CMND</th>\n' +
+            '            <th>Ngày tháng năm sinh</th>\n' +
+            '            <th>Email</th>\n' +
+            '            <th>Địa chỉ</th>\n' +
+            '            <th>Loại custommer</th>\n' +
+            '            <th>Giảm giá</th>\n' +
+            '            <th>Số lượng đi kèm</th>\n' +
+            '            <th>Số ngày thuê</th>\n' +
+            '            <th>Loại dịch vụ</th>\n' +
+            '            <th>Loại phòng thuê</th>\n' +
+            '        </tr>'
+        for (let i = 0; i < listcustomer.length; i++) {
+            table += '<tr>\n' + '<td>' + (i + 1) + '</td>\n'
+            for (j = 0; j < 11; j++) {
+                table += '<td>' + listcustomer[i][j] + '</td>\n'
+            }
+            table += '</tr>\n'
+        }
+        table += '</table>'
+        document.getElementById("show1").innerHTML = table;
+    }
+    document.write("</table>");
+
+    function edit() {
+        let a = prompt("nhập số thứ tự người muốn sửa")
+        if(a>listcustomer.length){
+            alert("không đúng");
+            edit();
+        }
+        let edit1 = parseInt(prompt("1.Tên : " +  '\n' +
+            "2.cmnd : " + '\n' +
+            "3.Ngày sinh : " +  '\n' +
+            "4.email :" + '\n' +
+            "5.Địa chỉ :" + '\n' +
+            "6.Loại Customer  :" + '\n' +
+            "7.Giảm giá  :" + '\n' +
+            "8.Số lượng đi kèm:" + '\n' +
+            "9.Số ngày:" +  '\n' +
+            "10.Loại dịch vụ  :" +'\n' +
+            "11.Loại phòng :" +  '\n'));
+        switch (edit1) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                editcustomer1(a-1,edit1-1);
+        }
+    }
+    function editcustomer1(x,y) {
+        let b =prompt("hãy nhập nội dung bạn muốn sửa");
+        listcustomer[x].splice(y,1,b);
+        disPlay();
+    }
+    function delete2() {
+        let s = parseInt(prompt("nhap so thu tu nguoi muon xoa"));
+        listcustomer.splice((s-1),1);
+        disPlay();
+    }
+    function exit1() {
+        let exit=confirm("Bạn có chắc chắn muốn thoát khỏi chương trình hay không");
+        window.close(exit);
+    }
+</script>
+
+</body>
+</html>
