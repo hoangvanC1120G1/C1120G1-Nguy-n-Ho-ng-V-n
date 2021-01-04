@@ -2,7 +2,7 @@
     font-weight: bold;
     font-size: 20px;
     position: absolute;
-    left: 150px;
+    left: 100px;
     top: 100px;
     text-decoration-color: darkolivegreen;
 }
@@ -12,7 +12,7 @@
     font-weight: normal;
     font-size: 20px;
     position: absolute;
-    right: 200px;
+    right: 100px;
     top: 100px;
 }
 #div2{

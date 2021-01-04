@@ -28,7 +28,7 @@
             CMND
         </td>
         <td width="300px">
-            <input type="text" style="width: 300px" id="cmt"/>
+            <input type="number" style="width: 300px" id="cmt"/>
         </td>
     </tr>
     <tr>
@@ -245,30 +245,35 @@
                 tempname+=a.charAt(i).toUpperCase();
                 continue;
             }tempname+=a.charAt(i);
-        } a=tempname;
+        }a=tempname;
+
+
 
 
         // let check=false;
-        let b = document.getElementById("cmt");
-        // do{
-        //     if(!isNaN(b)){
-        //         b= Number.parseFloat(b);
+        // do {
+        //     let b = parseInt(prompt("enter cmnd"));
+        //     if (!isNaN(b)) {
+        //         b = Number.parseFloat(b);
         //     }
-        //     if (Number.isInteger(b)){
-        //         alert("CMND phai la so");
+        //     if (!Number.isInteger(b)) {
+        //         alert("nhập không đúng định dạng");
         //         continue;
+        //
         //     }
-        //     if (b<10000000 || b>99999999){
-        //         alert("CMND ko du");
+        //     if (b < 100000000 || b > 999999999) {
+        //         alert("cmnd ko đúng định dạng");
         //         continue;
+        //     } else {
+        //         check = true;
         //     }
-        //    check = true;
-        // }while (!check){
-        //     check = true;
-        // }
+        // } while (!check)
 
 
 
+
+
+        let b = document.getElementById("cmt").value;
         let c = document.getElementById("dateofbirth").value;
         let d = document.getElementById("dc").value;
         let e = document.getElementById("mail").value;
@@ -281,7 +286,7 @@
         checkId("cmt", b, 9)
 
         document.getElementById("ten1").innerText = a;
-        document.getElementById("cmt1").innerText = b;
+        document.getElementById("cmt1").innerHTML = b;
         document.getElementById("dateofbirth1").innerText = c;
         document.getElementById("dc1").innerText = d;
         document.getElementById("mail1").innerText = e  ;
@@ -339,6 +344,7 @@
         document.getElementById("giam1").innerText= totalmoney + "$"
     }
     // ham kiem tra CMND
+
     function checkNumber(str) {
         if (isNumeric(str)) {
             return true;

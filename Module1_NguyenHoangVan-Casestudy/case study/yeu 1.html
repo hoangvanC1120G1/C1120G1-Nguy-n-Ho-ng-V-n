@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Yêu cầu 1</title>
-    <link type="text/css" rel="stylesheet" href="table2.css">
+<!--    <link type="text/css" rel="stylesheet" href="table2.css">-->
 </head>
 <body>
-<div id="div3"></div>
+<!--<div id="div3"></div>-->
 <div id="div4">
     <p style="color: aliceblue">Ứng dụng quản lý khu nghỉ dưỡng Furama</p>
 </div>
@@ -36,7 +36,7 @@
             Ngày tháng năm sinh
         </td>
         <td width="300px">
-            <input type="date"  name="birthday" id="dateofbirth" style="width: 300px"/>
+            <input type="date" name="birthday" id="dateofbirth" style="width: 300px"/>
         </td>
     </tr>
     <tr>
@@ -45,19 +45,6 @@
         </td>
         <td width="300px">
             <input type="text" style="width: 300px" id="dc"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Địa chỉ được giảm giá
-        </td>
-        <td width="300px">
-            <select style="width: 308px" id="dc2">
-                <option id="DN">Đà Nẵng </option>
-                <option id="Hue">Huế  </option>
-                <option id="QN">Quảng Nam  </option>
-                <option id="">Khác...</option>
-            </select>
         </td>
     </tr>
     <tr>
@@ -74,10 +61,10 @@
         </td>
         <td width="300px">
             <select style="width: 308px" id="cus">
-                <option id="Dia">Diamond </option>
-                <option id="Pla">Platinum </option>
-                <option id="Go">Gold </option>
-                <option id="Sli">Sliver  </option>
+                <option id="Dia">Diamond</option>
+                <option id="Pla">Platinum</option>
+                <option id="Go">Gold</option>
+                <option id="Sli">Sliver</option>
                 <option id="Mem">Member</option>
             </select>
         </td>
@@ -124,7 +111,7 @@
     </tr>
     <tr>
         <td>
-           Giảm giá
+            Giảm giá
         </td>
         <td>
             <input type="text" style="width: 300px" id="giam"/>
@@ -132,17 +119,17 @@
 
     </tr>
 </table>
-<br>
+
 <div id="div2">
-    <button type="button" onclick="aa()" id="nut 1">Nhập</button>
-<!--    <button type="button" onclick="bb()" id="nut 2">Tính tiền</button>-->
+    <button type="button" onclick="input()" id="nut 1">Nhập</button>
+    <!--    <button type="button" onclick="bb()" id="nut 2">Tính tiền</button>-->
 </div>
 <table border="1" id="table2">
     <caption>
         <h3>Hiện thông tin cá nhân</h3>
     </caption>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Họ và tên
         </td>
         <td width="300px" height="30">
@@ -150,15 +137,15 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             CMND
         </td>
         <td width="300px">
-            <p id="cmt1" ></p>
+            <p id="cmt1"></p>
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Ngày tháng năm sinh
         </td>
         <td width="300px">
@@ -166,7 +153,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Địa chỉ
         </td>
         <td width="300px">
@@ -174,7 +161,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Email
         </td>
         <td width="300px">
@@ -182,7 +169,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Loại customer
         </td>
         <td>
@@ -190,7 +177,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Số lượng đi kèm
         </td>
         <td width="300px">
@@ -198,7 +185,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Số ngày thuê
         </td>
         <td width="300px">
@@ -206,7 +193,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Loại dịch vụ
         </td>
         <td width="300px">
@@ -214,7 +201,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px">
+        <td width="300px">
             Loại phòng thuê
         </td>
         <td width="300px">
@@ -222,7 +209,7 @@
         </td>
     </tr>
     <tr>
-        <td  width="300px" height="30">
+        <td width="300px" height="30">
             Số tiền phải trả
         </td>
         <td width="300px" height="30">
@@ -231,33 +218,33 @@
     </tr>
 
 </table>
-    <script>
-        function aa() {
-            let a = document.getElementById("ten").value;
-            let b = document.getElementById("cmt").value;
-            let c = document.getElementById("dateofbirth").value;
-            let d = document.getElementById("dc").value;
-            let e = document.getElementById("mail").value;
-            let f = document.getElementById("cus").value;
-            let g = document.getElementById("sl").value;
-            let h = document.getElementById("snt").value;
-            let i = document.getElementById("loai").value;
-            let k = document.getElementById("phong").value;
-            let l = document.getElementById("giam").value;
-            let m= i * h *(1-l/100)
-            document.getElementById("ten1").innerText = a;
-            document.getElementById("cmt1").innerText = b;
-            document.getElementById("dateofbirth1").innerText = c;
-            document.getElementById("dc1").innerText = d;
-            document.getElementById("mail1").innerText = e;
-            document.getElementById("cus1").innerText = f;
-            document.getElementById("sl1").innerText = g;
-            document.getElementById("sn1").innerText = h;
-            document.getElementById("loai1").innerText = i;
-            document.getElementById("phong1").innerText = k;
-            document.getElementById("giam1").innerHTML = m;
-        }
+<script>
+    function input() {
+        let name = document.getElementById("ten").value;
+        let id = document.getElementById("cmt").value;
+        let birthday = document.getElementById("dateofbirth").value;
+        let address = document.getElementById("dc").value;
+        let email = document.getElementById("mail").value;
+        let customer = document.getElementById("cus").value;
+        let amount = document.getElementById("sl").value;
+        let day = document.getElementById("snt").value;
+        let species = document.getElementById("loai").value;
+        let room = document.getElementById("phong").value;
+        let discount = document.getElementById("giam").value;
+        let total = species * day * (1 - discount/ 100)
+        document.getElementById("ten1").innerText = name;
+        document.getElementById("cmt1").innerText = id;
+        document.getElementById("dateofbirth1").innerText = birthday;
+        document.getElementById("dc1").innerText = address;
+        document.getElementById("mail1").innerText = email;
+        document.getElementById("cus1").innerText = customer;
+        document.getElementById("sl1").innerText = amount;
+        document.getElementById("sn1").innerText = day;
+        document.getElementById("loai1").innerText = species;
+        document.getElementById("phong1").innerText = room;
+        document.getElementById("giam1").innerText = total;
+    }
 
-    </script>
+</script>
 </body>
 </html>

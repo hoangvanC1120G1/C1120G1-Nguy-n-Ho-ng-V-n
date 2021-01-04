@@ -75,7 +75,7 @@
         }
         disPlay()
     }
-    listcustomer;
+    // listcustomer;
     function disPlay() {
         document.write('<p id="show1"></p>')
         let table = '<table border="1">\n' +
@@ -106,8 +106,8 @@
     document.write("</table>");
 
     function edit() {
-        let a = prompt("nhập số thứ tự người muốn sửa")
-        if(a>listcustomer.length){
+        let x = prompt("nhập số thứ tự người muốn sửa")
+        if(x>listcustomer.length){
             alert("không đúng");
             edit();
         }
@@ -134,7 +134,7 @@
             case 9:
             case 10:
             case 11:
-                editcustomer1(a-1,edit1-1);
+                editcustomer1(x-1,edit1-1);
         }
     }
     function editcustomer1(x,y) {

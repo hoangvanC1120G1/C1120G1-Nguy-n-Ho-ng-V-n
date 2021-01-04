@@ -6,10 +6,11 @@
 </head>
 <body>
     <p id="show1"></p>
-  <button type="button" value="them" onclick="nhan()">them</button>
+    <button type="button" value="them" onclick="nhan()">them</button>
+    <button type="button" value="hienthi" onclick="hienthi()">hienthitheothutu</button>
 
     <script>
-        let listDS=["Nguyen Van A","Nguyen Van B",];
+        let listDS=[];
         function show() {
             let table = '<table border="1">\n' +
                 '        <tr>\n' +
@@ -25,8 +26,9 @@
                     '        </tr>'
             }
             document.getElementById("show1").innerHTML= table;
+            // document.write("</table>");
         }
-        document.write("</table>")
+
         show();
         function nhan() {
             let newinput= prompt("nhap ten muon them");
@@ -37,11 +39,15 @@
             }
             show();
         }
-        function delete1(id) {
-            let dele=confirm("Bạn có chắc muốn xóa sản phẩm này không"+listDS[id])
+        function delete1(i) {
+            let dele=confirm("Bạn có chắc muốn xóa sản phẩm này không"+listDS[i])
             if(dele){
-                listDS.splice(id,1)
+                listDS.splice(i,1)
             }
+            show();
+        }
+        function hienthi() {
+            listDS.sort()
             show();
         }
     </script>
