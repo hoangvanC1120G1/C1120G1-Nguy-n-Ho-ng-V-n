@@ -8,7 +8,8 @@ public class hien_thi_cac_loai_hinh {
         System.out.println("1.Print the rectangle");
         System.out.println("2.Print the square triangle (The corner is square at 4 different angles: top-left, top-right, botton-left, botton-right)");
         System.out.println("3.Print isosceles triangle");
-        System.out.println("4.Exit");
+        System.out.println("4.Tam giac can");
+        System.out.println("5.Exit");
         System.out.println("Enter your choice");
         int input = sc.nextInt();
         switch (input) {
@@ -40,9 +41,17 @@ public class hien_thi_cac_loai_hinh {
             }
             break;
             case 4:
-                System.exit(4);
+                for(int i=0;i<6;i++){
+                    for (int j=5;j>i;j--){
+                        System.out.print(" ");
+                    }
+                    for (int k=0;k<=i;k++){
+                        System.out.print(" *");
+                    }
+                    System.out.println();
+                }
             case 5:
-                
+                System.exit(4);
             default:
                 System.out.println("No choice!");
 
