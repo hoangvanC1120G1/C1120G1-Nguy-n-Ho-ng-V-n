@@ -2,7 +2,7 @@ package introduction_to_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Giaiphuongrinhbacnhat {
+public class GiaiPhuongTrinhBacNhat {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         double a,b,c;

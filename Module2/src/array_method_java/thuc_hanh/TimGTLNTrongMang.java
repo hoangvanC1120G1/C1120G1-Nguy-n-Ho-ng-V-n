@@ -2,7 +2,7 @@ package array_method_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Timgiatrilonnhattrongmang {
+public class TimGTLNTrongMang {
     public static void main(String[] args) {
         int size;
         int[] array;

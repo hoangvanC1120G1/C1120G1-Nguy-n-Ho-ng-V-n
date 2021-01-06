@@ -2,7 +2,7 @@ package array_method_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class Thuongtrinhchuyendoinhiedo {
+public class ChuongTrinhChuyenDoiNhietDo {
     public static double celsiusToFahrenheit(double celsius) {
         double fahrenheit = (9.0 / 5) * celsius + 32;
         return fahrenheit;
