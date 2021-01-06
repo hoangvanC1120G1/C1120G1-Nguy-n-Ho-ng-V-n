@@ -1,6 +1,6 @@
 package array_method_java.bai_tap;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 
 public class ThemPhanTuVaoMang {
     public static void main(String[] args) {

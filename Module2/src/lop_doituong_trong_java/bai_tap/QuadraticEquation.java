@@ -6,12 +6,14 @@ public class QuadraticEquation {
     private double a;
     private double b;
     private double c;
-    public QuadraticEquation(double a, double b, double c){
-        this.a=a;
-        this.b=b;
-        this.c=c;
+
+    public QuadraticEquation(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
-    public QuadraticEquation(){
+
+    public QuadraticEquation() {
 
     }
 
@@ -39,31 +41,33 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    public double getDiscriminant(double a,double b,double c){
-        return b*b-(4*a*c);
+    public double getDiscriminant(double a, double b, double c) {
+        return b * b - (4 * a * c);
     }
-    public double getRoot1(){
-        return (-b+ Math.sqrt(getDiscriminant(this.a,this.b,this.c)))/2*a;
+
+    public double getRoot1() {
+        return (-b + Math.sqrt(getDiscriminant(this.a, this.b, this.c))) / 2 * a;
     }
-    public double getRoot2(){
-        return (-b- Math.sqrt(getDiscriminant(this.a,this.b,this.c)))/2*a;
+
+    public double getRoot2() {
+        return (-b - Math.sqrt(getDiscriminant(this.a, this.b, this.c))) / 2 * a;
     }
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Nhap a:");
-        double a=sc.nextDouble();
+        double a = sc.nextDouble();
         System.out.println("Nhap b:");
-        double b=sc.nextDouble();
+        double b = sc.nextDouble();
         System.out.println("Nhap c:");
-        double c=sc.nextDouble();
-        QuadraticEquation returndelta=new QuadraticEquation(a,b,c);
-        if(returndelta.getDiscriminant(a,b,c)>0){
+        double c = sc.nextDouble();
+        QuadraticEquation returndelta = new QuadraticEquation(a, b, c);
+        if (returndelta.getDiscriminant(a, b, c) > 0) {
             System.out.println("Phuong trinh co 2 nghiem: ");
             System.out.println(returndelta.getRoot1());
             System.out.println(returndelta.getRoot2());
-        }else if(returndelta.getDiscriminant(a,b,c)==0){
-            System.out.println("Phuong trinh co 1 nghiem: "+returndelta.getRoot1());
+        } else if (returndelta.getDiscriminant(a, b, c) == 0) {
+            System.out.println("Phuong trinh co 1 nghiem: " + returndelta.getRoot1());
         } else {
             System.out.println("The equation has no roots");
         }
