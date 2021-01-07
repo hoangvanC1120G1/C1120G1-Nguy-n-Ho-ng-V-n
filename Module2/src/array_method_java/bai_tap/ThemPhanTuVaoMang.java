@@ -13,20 +13,20 @@ public class ThemPhanTuVaoMang {
             System.out.println("Nhap gia tri can them");
             int newInput = sc.nextInt();
             System.out.println("Nhap vi tri can them");
-            int inDex = sc.nextInt();
-            if (inDex < 0 || inDex > arr2.length) {
+            int index = sc.nextInt();
+            if (index < 0 || index > arr2.length) {
                 System.out.println("Vi tri ban nhap khong co trong mang vui long nhap lai");
                 flag = true;
             }
-            if (inDex > 0 && inDex < arr2.length) {
+            if (index > 0 && index < arr2.length) {
                 flag = false;
                 for (int i = 0; i < arr.length; i++) {
                     arr2[i] = arr[i];
                 }
-                for (int j = inDex-1; j < arr2.length - 1; j++) {
+                for (int j = index-1; j < arr2.length - 1; j++) {
                     arr2[j + 1] = arr[j];
                 }
-                arr2[inDex-1] = newInput;
+                arr2[index-1] = newInput;
                 System.out.print("New Array: ");
                 for (int a : arr2) {
                     System.out.print(a + ", ");
