@@ -2,7 +2,7 @@ package loop_in_java.Thuchanh;
 
 import java.util.Scanner;
 
-public class ungdungtinhtienlaichovay {
+public class UngDungTinhTienLaiChoVay {
     public static void main(String[] args) {
         double money = 1.0;
         int month = 1;

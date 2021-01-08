@@ -41,16 +41,16 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    public double getDiscriminant(double a, double b, double c) {
-        return b * b - (4 * a * c);
+    public double getDiscriminant() {
+        return this.b * this.b - (4 * this.a * this.c);
     }
 
     public double getRoot1() {
-        return (-b + Math.sqrt(getDiscriminant(this.a, this.b, this.c))) / 2 * a;
+        return (-b + Math.sqrt(getDiscriminant())) / 2 * a;
     }
 
     public double getRoot2() {
-        return (-b - Math.sqrt(getDiscriminant(this.a, this.b, this.c))) / 2 * a;
+        return (-b - Math.sqrt(getDiscriminant())) / 2 * a;
     }
 
     public static void main(String[] args) {
@@ -62,11 +62,11 @@ public class QuadraticEquation {
         System.out.println("Nhap c:");
         double c = sc.nextDouble();
         QuadraticEquation returndelta = new QuadraticEquation(a, b, c);
-        if (returndelta.getDiscriminant(a, b, c) > 0) {
+        if (returndelta.getDiscriminant() > 0) {
             System.out.println("Phuong trinh co 2 nghiem: ");
             System.out.println(returndelta.getRoot1());
             System.out.println(returndelta.getRoot2());
-        } else if (returndelta.getDiscriminant(a, b, c) == 0) {
+        } else if (returndelta.getDiscriminant() == 0) {
             System.out.println("Phuong trinh co 1 nghiem: " + returndelta.getRoot1());
         } else {
             System.out.println("The equation has no roots");

@@ -2,7 +2,7 @@ package loop_in_java.Thuchanh;
 
 import java.util.Scanner;
 
-public class thiet_ke_menu_cho_ung_dung {
+public class ThietKeMenuChoUngDung {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int choice;

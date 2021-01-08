@@ -2,7 +2,7 @@ package loop_in_java.Thuchanh;
 
 import java.util.Scanner;
 
-public class kiemtrasonguyento {
+public class KiemTraSoNguyenTo {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter Number");

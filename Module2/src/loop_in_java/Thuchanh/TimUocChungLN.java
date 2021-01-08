@@ -2,7 +2,7 @@ package loop_in_java.Thuchanh;
 
 import java.util.Scanner;
 
-public class tim_uoc_chung_lon_nhat {
+public class TimUocChungLN {
     public static void main(String[] args) {
         int a,b;
         Scanner sc=new Scanner(System.in);

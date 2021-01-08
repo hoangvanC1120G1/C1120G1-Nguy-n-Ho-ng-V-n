@@ -78,14 +78,13 @@ public class Fan {
                 ", radius=" + radius +
                 ", color='" + color + '\'' +
                 '}';
-        }else if (on==false){
+        }else{
             return "Fan{" +
                     "Fan is off"+
                     ", radius=" + radius +
                     ", color='" + color + '\'' +
                     '}';
         }
-        return toString();
     }
     public static void main(String[] args) {
         Fan fan = new Fan(1,true,10,"Yellow");
